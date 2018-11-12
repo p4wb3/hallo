@@ -78,4 +78,14 @@ newList.extend(randomList)
 randomList=list(set(newList))
 print(randomList)
 
-
+'''
+metoda która przyjmie dwa parametry od uzytkownika i sprawdzi czy sa takie same
+'''
+inputList = input('podaj pięć liczb : ')
+list1 = inputList.split(" ")
+try:
+    list1 = [int(i) for i in list1]
+except ValueError :
+    print("to many spaces or wrong type of value")
+    raise
+print(list1)
