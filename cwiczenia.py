@@ -79,13 +79,31 @@ randomList=list(set(newList))
 print(randomList)
 
 '''
-metoda która przyjmie dwa parametry od uzytkownika i sprawdzi czy sa takie same
+metoda która przyjmie dwie listy  liczb od uzytkownika i zwroci połączoną z:
+niepowtarzającynmi sie elementami 
 '''
-inputList = input('podaj pięć liczb : ')
-list1 = inputList.split(" ")
+inputList1 = input('podaj pięć liczb : ')
+list1 = inputList1.split(" ")
+inputList2 = input('podaj pięć liczb : ')
+list2 = inputList2.split(" ")
 try:
     list1 = [int(i) for i in list1]
-except ValueError :
+    list2 = [int(i) for i in list2]
+except ValueError:
     print("to many spaces or wrong type of value")
     raise
-print(list1)
+
+def noDuplicateList(list1,list2):
+    list1.extend(list2)
+    UniqelistElement = list(set(list1))
+    print("list after marging same element: ", UniqelistElement)
+
+def showDuplicates(list1,list2):
+
+    list1.extend(list2)
+    newList= list(list1)
+
+    newList= set([x for x in newList if newList.count(x) > 1])
+    print(newList)
+noDuplicateList(list1, list2)
+showDuplicates(list1,list2)
