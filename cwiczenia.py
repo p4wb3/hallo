@@ -58,52 +58,57 @@
 #     print('bad input')
 from string import digits
 
-newList=[]
-firstList = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
-secondList = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
-
-import random
-
-firstList.extend(secondList)
-newList = list(set(firstList))
-newList.sort()
-print(newList)
-import random
-import timeit
-
-# Random lists from [0-999] interval
-randomList = [random.randint(0, 100) for r in range(10)]
-randomList.sort()
-newList.extend(randomList)
-randomList=list(set(newList))
-print(randomList)
+# newList=[]
+# firstList = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
+# secondList = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+#
+# import random
+#
+# firstList.extend(secondList)
+# newList = list(set(firstList))
+# newList.sort()
+# print(newList)
+# import random
+# import timeit
+#
+# # Random lists from [0-999] interval
+# randomList = [random.randint(0, 100) for r in range(10)]
+# randomList.sort()
+# newList.extend(randomList)
+# randomList=list(set(newList))
+# print(randomList)
 
 '''
 metoda która przyjmie dwie listy  liczb od uzytkownika i zwroci połączoną z:
 niepowtarzającynmi sie elementami 
 '''
-inputList1 = input('podaj pięć liczb : ')
-list1 = inputList1.split(" ")
-inputList2 = input('podaj pięć liczb : ')
-list2 = inputList2.split(" ")
-try:
-    list1 = [int(i) for i in list1]
-    list2 = [int(i) for i in list2]
-except ValueError:
-    print("to many spaces or wrong type of value")
-    raise
-
-def noDuplicateList(list1,list2):
-    list1.extend(list2)
-    UniqelistElement = list(set(list1))
-    print("list after marging same element: ", UniqelistElement)
-
-def showDuplicates(list1,list2):
-
-    list1.extend(list2)
-    newList= list(list1)
-
-    newList= set([x for x in newList if newList.count(x) > 1])
-    print(newList)
-noDuplicateList(list1, list2)
-showDuplicates(list1,list2)
+# inputList1 = input('podaj pięć liczb : ')
+# list1 = inputList1.split(" ")
+# inputList2 = input('podaj pięć liczb : ')
+# list2 = inputList2.split(" ")
+# try:
+#     list1 = [int(i) for i in list1]
+#     list2 = [int(i) for i in list2]
+# except ValueError:
+#     print("to many spaces or wrong type of value")
+#     raise
+#
+# def noDuplicateList(list1,list2):
+#     list1.extend(list2)
+#     UniqelistElement = list(set(list1))
+#     print("list after marging same element: ", UniqelistElement)
+#
+#
+# def showDuplicates(list1,list2):
+#     listOfDuplicate = []
+#     list1.extend(list2)
+#     for i in list1:
+#        if list1.count(i)>1:
+#             listOfDuplicate.append(i)
+#     listOfDuplicate= list(set(listOfDuplicate))
+#     listOfDuplicate.sort()
+#     print(listOfDuplicate)
+#
+#
+# showDuplicates(list1,list2)
+# noDuplicateList(list1, list2)
