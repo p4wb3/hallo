@@ -5,7 +5,7 @@
 # print(numbList)
 # print(numbList.count(1))
 # print(numbList.extend(1))
-
+# print(("*")*80)
 
 # name = input('podaj imie : ')
 # age = input('podaj wiek :')
@@ -14,7 +14,7 @@
 #
 # print(('twoje imie: ' + name  +' twoj wiek : '+ age+'\n')*copies)
 
-
+# print(("*")*80)
 
 # num= input('give number: ')
 # try:
@@ -25,7 +25,7 @@
 #         print('number' + str(num) + ' you give is not even')
 # except ValueError:
 #     print('the value ypu give is not a number')
-
+# print(("*")*80)
 
 # a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
 # newList= []
@@ -44,7 +44,7 @@
 #         newList.append(i)
 # print(newList)
 
-
+# print(("*")*80)
 
 # numb = input('give number: ')
 # divList= []
@@ -56,7 +56,9 @@
 #     print(divList)
 # except ValueError:
 #     print('bad input')
-from string import digits
+
+# print(("*")*80)
+
 
 # newList=[]
 # firstList = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
@@ -77,6 +79,7 @@ from string import digits
 # newList.extend(randomList)
 # randomList=list(set(newList))
 # print(randomList)
+# print(("*")*80)
 
 '''
 metoda która przyjmie dwie listy  liczb od uzytkownika i zwroci połączoną z:
@@ -111,4 +114,97 @@ niepowtarzającynmi sie elementami
 #
 #
 # showDuplicates(list1,list2)
+
 # noDuplicateList(list1, list2)
+
+# normalText = input('Give palindrome text : ')
+#
+# palindromeText = normalText[::-1]
+#
+# if palindromeText == normalText:
+#     print("{} = {}".format(normalText,palindromeText))
+# else:
+#     print("{} != {}".format(normalText, palindromeText))
+
+# a = [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+# newList = [x for x in a if x%2==0 ]
+#
+# print(newList)
+# import random
+# a=[]
+# for x in range(10):
+#     a.append(random.randint(1, 101))
+#     b = [x for x in a if x%2==0 ]
+#
+# print('Wylosowana lista to : {} \nliczby parzyste listy to {}'.format(a,b))
+
+#
+# Rock beats scissors
+# Scissors beats paper
+# Paper beats rock
+
+
+
+# while True:
+#     # optionList = {'Rock': 1, 'Scissors': 2, 'Paper': 3}
+#     p1answer = int(input('Hit 1 2 3 option:\n1.Rock\n2.Scissors\n3.Paper\n:'))
+#     p2answer = int(input('Hit 1 2 3 option:\n1.Rock\n2.Scissors\n3.Paper\n:'))
+#     # a = (optionList.get(p1answer))
+#     # b = (optionList.get(p2answer))
+#     # result = a - b
+#     result = p1answer-p2answer
+#     if [p1answer,p2answer] in [1, 2, 3]:
+#
+#             if result in [-1,2]:
+#                 print('Player 1 Wins!!!!!!!!!!')
+#                 if input("do you want to play another game:y//n:\n")=='y':
+#                     continue
+#                 else:
+#                     print('game over')
+#                     break
+#
+#             elif result in [-2,1]:
+#                 print('player 2 win!!!')
+#                 if input("do you want to play another game:y//n:\n")=='y':
+#                     continue
+#                 else:
+#                     print('game over')
+#                     break
+#     else:
+#         print('wrong input')
+#         break
+#
+# print(("*")*80)
+# import random
+# ranNumb= random.randint(1,10)
+# print(ranNumb)
+# x=0
+#
+#
+# while True:
+#
+#     playerNumb = (input('podaj cyfre:'))
+#
+#     try:
+#         playerNumb= int(playerNumb)
+#         x = x + 1
+#     except ValueError:
+#         continue
+#
+#
+#
+#     if playerNumb != ranNumb:
+#
+#         if playerNumb <ranNumb:
+#             print('liczba jest zamała')
+#
+#             continue
+#         elif playerNumb> ranNumb:
+#             print('liczba jest za duża')
+#             continue
+#
+#     else:
+#
+#         print('you win \nliczba prób:'+ str(x))
+#         break
+# print(("*")*80)
